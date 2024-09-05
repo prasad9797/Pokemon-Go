@@ -1,0 +1,13 @@
+@if(pokemonImg){
+<img [src]="pokemonImg" />
+}
+<ul>
+  @for(pokemon of pokemonList; track pokemon.url){
+  <li
+    style="cursor: pointer; width: 150px"
+    (click)="getPokemonImage(pokemon.url)"
+  >
+    {{ pokemon.name }}
+  </li>
+  }
+</ul>
